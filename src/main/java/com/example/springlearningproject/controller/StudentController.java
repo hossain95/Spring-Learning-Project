@@ -24,8 +24,33 @@ public class StudentController {
 
     @GetMapping("/students/{id}")
     public Optional<Student> getStudentById(@PathVariable Long id){
-        System.out.println(studentService.getStudentById(id));
+//        System.out.println(studentService.getStudentById(id));
         return studentService.getStudentById(id);
+    }
+    @GetMapping("/students/email")
+    @ResponseBody
+    public Student studentByEmail(@RequestParam String email){
+//        System.out.println("email, "+ email);
+        return studentService.studentByEmail(email);
+    }
+
+    @GetMapping("/students/contact")
+    @ResponseBody
+    public Student studentByContact(@RequestParam String contact){
+//        System.out.println(contact);
+        return studentService.studentByContact(contact);
+    }
+
+    @GetMapping("/students/department")
+    @ResponseBody
+    public List<Student> studentsByDepartment(@RequestParam String department){
+        return studentService.studentsByDepartment(department);
+    }
+
+    @GetMapping("/students/name")
+    @ResponseBody
+    public List<Student> studentsByName(@RequestParam String name){
+        return studentService.studentsByName(name);
     }
 
     @PutMapping("/students/{studentId}")

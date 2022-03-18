@@ -43,4 +43,26 @@ public class StudentServiceImplement implements StudentService{
     public void deleteStudentById(Long studentId) {
         studentRepostiry.deleteById(studentId);
     }
+
+    @Override
+    public Student studentByEmail(String email) {
+        return studentRepostiry.studentByEmail(email);
+    }
+
+    @Override
+    public List<Student> studentsByDepartment(String department) {
+        return studentRepostiry.studentsFindByDepartment(department);
+    }
+
+    @Override
+    public Student studentByContact(String contact) {
+//        System.out.println(contact);
+        return studentRepostiry.studentByContact(contact);
+    }
+
+    @Override
+    public List<Student> studentsByName(String name) {
+//        System.out.println(name);
+        return studentRepostiry.studentsFindByName(name);
+    }
 }
