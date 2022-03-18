@@ -29,8 +29,8 @@ public class StudentController {
     }
 
     @PutMapping("/students/{studentId}")
-    public void updateStudentById(@RequestBody Student student,@PathVariable("studentId") Long studentId){
-        studentService.updateStudent(student, studentId);
+    public Student updateStudentById(@RequestBody Student student,@PathVariable("studentId") Long studentId){
+        return studentService.updateStudent(student, studentId);
     }
 
     @DeleteMapping("/students/{studentId}")

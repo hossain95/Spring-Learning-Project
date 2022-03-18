@@ -29,13 +29,14 @@ public class StudentServiceImplement implements StudentService{
     }
 
     @Override
-    public void updateStudent(Student student, Long studentId) {
+    public Student updateStudent(Student student, Long studentId) {
         Student std = studentRepostiry.findById(studentId).get();
         std.setName(student.getName());
         std.setDepartment(student.getDepartment());
         std.setEmail(student.getEmail());
+        std.setContact(student.getContact());
         std.setAddress(student.getAddress());
-        studentRepostiry.save(std);
+        return studentRepostiry.save(std);
     }
 
     @Override

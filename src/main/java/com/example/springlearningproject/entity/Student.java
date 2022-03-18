@@ -1,29 +1,34 @@
 package com.example.springlearningproject.entity;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.*;
 
-@Entity
+@Entity(name="student")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+@DynamicUpdate
 @Table(name = "student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long studentId;
+
+    @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
+
+    @Column(name = "contact", nullable = false, unique = true)
+    private String contact;
+
+    @Column(name = "department", nullable = false)
     private String department;
+
+    @Column(name = "address", nullable = true)
     private String address;
+
     public Long getStudentId() {
         return studentId;
-    }
-
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
     }
 
     public String getName() {
@@ -40,6 +45,14 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getDepartment() {
