@@ -18,7 +18,10 @@ public interface StudentRepostiry extends JpaRepository<Student, Long> {
     @Query("select s from student s where s.department = ?1")
     List<Student> studentsFindByDepartment(String department);
 
-    @Query("select s from student s where s.name = ?1")
+    @Query(
+            value = "SELECT * FROM student s where s.name = ?1",
+            nativeQuery = true
+    )
     List<Student> studentsFindByName(String name);
 
 }
