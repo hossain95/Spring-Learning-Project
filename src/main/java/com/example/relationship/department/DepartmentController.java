@@ -1,5 +1,6 @@
 package com.example.relationship.department;
 
+import com.example.relationship.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,5 +23,10 @@ public class DepartmentController {
     @GetMapping("/departments/name")
     public Department departmentByName(@RequestParam String name){
         return departmentService.departmentByName(name);
+    }
+
+    @PutMapping("/student/admit")
+    public Department studentAdmit(@RequestParam(name = "studentId")  Long studentId, @RequestParam(name = "departmentId") Long departmentId){
+        return departmentService.studentAdmitById(studentId, departmentId);
     }
 }
