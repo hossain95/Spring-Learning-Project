@@ -19,7 +19,7 @@ public class TeacherController {
         return teacherService.saveTeacher(teacher);
     }
 
-    @GetMapping("teachers")
+    @GetMapping("/teachers")
     public List<Teacher> listTeacher(){
         return teacherService.listTeacher();
     }
