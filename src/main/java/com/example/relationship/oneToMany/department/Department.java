@@ -1,6 +1,6 @@
-package com.example.relationship.department;
+package com.example.relationship.oneToMany.department;
 
-import com.example.relationship.student.Student;
+import com.example.relationship.oneToMany.student.Student;
 
 import javax.persistence.*;
 import java.util.List;

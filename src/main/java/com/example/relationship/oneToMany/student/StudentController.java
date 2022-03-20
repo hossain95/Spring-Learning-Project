@@ -1,4 +1,4 @@
-package com.example.relationship.student;
+package com.example.relationship.oneToMany.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

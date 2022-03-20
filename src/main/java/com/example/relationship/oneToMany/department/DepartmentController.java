@@ -1,6 +1,5 @@
-package com.example.relationship.department;
+package com.example.relationship.oneToMany.department;
 
-import com.example.relationship.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

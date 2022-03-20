@@ -1,10 +1,9 @@
-package com.example.relationship.student;
+package com.example.relationship.oneToMany.student;
 
-import com.example.relationship.department.Department;
+import com.example.relationship.oneToMany.department.Department;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 public class Student {

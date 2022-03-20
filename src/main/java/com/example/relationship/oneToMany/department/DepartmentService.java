@@ -1,12 +1,11 @@
-package com.example.relationship.department;
+package com.example.relationship.oneToMany.department;
 
-import com.example.relationship.student.Student;
-import com.example.relationship.student.StudentRepository;
+import com.example.relationship.oneToMany.student.Student;
+import com.example.relationship.oneToMany.student.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class DepartmentService {

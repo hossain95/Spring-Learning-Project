@@ -1,4 +1,4 @@
-package com.example.relationship.student;
+package com.example.relationship.oneToMany.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
